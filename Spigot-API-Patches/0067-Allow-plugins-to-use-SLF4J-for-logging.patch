@@ -14,10 +14,10 @@ it without having to shade it in the plugin and going through
 several layers of logging abstraction.
 
 diff --git a/pom.xml b/pom.xml
-index 7ec7e6047193a6b390d24f6d2722e35d1d36830d..6b71d9a397dd5b72320402a47b8e7197d24e061c 100644
+index a6fbfa7ca7976f790690b4ffff37f48b326660db..c09def9ac68a28daa63f7a1a30e3ba3a8ccafb7a 100644
 --- a/pom.xml
 +++ b/pom.xml
-@@ -144,6 +144,13 @@
+@@ -150,6 +150,13 @@
              <version>20.1.0</version>
              <scope>provided</scope>
          </dependency>
