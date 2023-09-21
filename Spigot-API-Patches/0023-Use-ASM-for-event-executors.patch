@@ -6,10 +6,10 @@ Subject: [PATCH] Use ASM for event executors.
 Uses method handles for private or static methods.
 
 diff --git a/pom.xml b/pom.xml
-index 162cce75dd5bf729687db75aa7fcd18b22bfb822..a6fbfa7ca7976f790690b4ffff37f48b326660db 100644
+index 281750f79f3d7ef6adc68eb98dcef038d43301f8..6e060b3fb0073da04124a8bd68bbe4629728bbbd 100644
 --- a/pom.xml
 +++ b/pom.xml
-@@ -169,6 +169,17 @@
+@@ -173,6 +173,17 @@
              <version>9.1</version>
              <scope>test</scope>
          </dependency>

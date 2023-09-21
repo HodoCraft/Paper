@@ -7,18 +7,18 @@ Co-authored-by: zml <zml@stellardrift.ca>
 Co-authored-by: Jake Potrebic <jake.m.potrebic@gmail.com>
 
 diff --git a/pom.xml b/pom.xml
-index 9aafdcc49ed83b403abb96891008103e6d6a69fa..162cce75dd5bf729687db75aa7fcd18b22bfb822 100644
+index 9aafdcc49ed83b403abb96891008103e6d6a69fa..281750f79f3d7ef6adc68eb98dcef038d43301f8 100644
 --- a/pom.xml
 +++ b/pom.xml
 @@ -22,6 +22,7 @@
          <maven.compiler.source>1.8</maven.compiler.source>
          <maven.compiler.target>1.8</maven.compiler.target>
          <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-+        <adventure.version>4.10.1</adventure.version> <!-- Paper - When updating this make sure to update the linked JavaDocs on the homepage as well! -->
++        <adventure.version>4.14.0</adventure.version> <!-- Paper - When updating this make sure to update the linked JavaDocs on the homepage as well! -->
      </properties>
  
      <repositories>
-@@ -31,7 +32,45 @@
+@@ -31,7 +32,49 @@
          </repository>
      </repositories>
  
@@ -54,6 +54,10 @@ index 9aafdcc49ed83b403abb96891008103e6d6a69fa..162cce75dd5bf729687db75aa7fcd18b
 +            <groupId>net.kyori</groupId>
 +            <artifactId>adventure-text-serializer-plain</artifactId>
 +        </dependency>
++        <dependency>
++            <groupId>net.kyori</groupId>
++            <artifactId>adventure-text-minimessage</artifactId>
++        </dependency>
 +        <!-- https://mvnrepository.com/artifact/org.checkerframework/checker-qual -->
 +        <dependency>
 +            <groupId>org.checkerframework</groupId>
@@ -64,7 +68,7 @@ index 9aafdcc49ed83b403abb96891008103e6d6a69fa..162cce75dd5bf729687db75aa7fcd18b
          <dependency>
              <groupId>it.unimi.dsi</groupId>
              <artifactId>fastutil</artifactId>
-@@ -216,6 +255,12 @@
+@@ -216,6 +259,13 @@
                          <link>https://javadoc.io/doc/org.yaml/snakeyaml/1.27/</link>
                          <link>https://javadoc.io/doc/org.jetbrains/annotations-java5/20.1.0/</link>
                          <link>https://javadoc.io/doc/net.md-5/bungeecord-chat/1.16-R0.4/</link>
@@ -73,6 +77,7 @@ index 9aafdcc49ed83b403abb96891008103e6d6a69fa..162cce75dd5bf729687db75aa7fcd18b
 +                        <link>https://jd.advntr.dev/text-serializer-gson/${adventure.version}/</link>
 +                        <link>https://jd.advntr.dev/text-serializer-legacy/${adventure.version}/</link>
 +                        <link>https://jd.advntr.dev/text-serializer-plain/${adventure.version}/</link>
++                        <link>https://jd.advntr.dev/text-minimessage/${adventure.version}/</link>
 +                        <!-- Paper end -->
                      </links>
                  </configuration>
