@@ -1,0 +1,141 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Lm5392 <lmmodqwq@outlook.com>
+Date: Sat, 2 Aug 2025 13:58:33 +0800
+Subject: [PATCH] Disable vanilla commands
+
+
+diff --git a/src/main/java/net/minecraft/commands/CommandDispatcher.java b/src/main/java/net/minecraft/commands/CommandDispatcher.java
+index 3d255c2ed31d7267bb6cd789702063671d785018..854954d88b86bc4737242104b3338832e3f79a21 100644
+--- a/src/main/java/net/minecraft/commands/CommandDispatcher.java
++++ b/src/main/java/net/minecraft/commands/CommandDispatcher.java
+@@ -118,24 +118,28 @@ public class CommandDispatcher {
+ 
+     public CommandDispatcher(CommandDispatcher.ServerType commanddispatcher_servertype) {
+         this(); // CraftBukkit
+-        CommandAdvancement.a(this.b);
+-        CommandAttribute.a(this.b);
+-        CommandExecute.a(this.b);
+-        CommandBossBar.a(this.b);
+-        CommandClear.a(this.b);
+-        CommandClone.a(this.b);
+-        CommandData.a(this.b);
+-        CommandDatapack.a(this.b);
+-        CommandDebug.a(this.b);
+-        CommandGamemodeDefault.a(this.b);
+-        CommandDifficulty.a(this.b);
++        // HodoCraft start
++        // CommandAdvancement.a(this.b);
++        // CommandAttribute.a(this.b);
++        // CommandExecute.a(this.b);
++        // CommandBossBar.a(this.b);
++        // CommandClear.a(this.b);
++        // CommandClone.a(this.b);
++        // CommandData.a(this.b);
++        // CommandDatapack.a(this.b);
++        // CommandDebug.a(this.b);
++        // CommandGamemodeDefault.a(this.b);
++        // CommandDifficulty.a(this.b);
++        // HodoCraft end
+         CommandEffect.a(this.b);
+-        CommandMe.a(this.b);
++        // CommandMe.a(this.b); // HodoCraft
+         CommandEnchant.a(this.b);
+-        CommandXp.a(this.b);
+-        CommandFill.a(this.b);
+-        CommandForceload.a(this.b);
+-        CommandFunction.a(this.b);
++        // HodoCraft start
++        // CommandXp.a(this.b);
++        // CommandFill.a(this.b);
++        // CommandForceload.a(this.b);
++        // CommandFunction.a(this.b);
++        // HodoCraft end
+         CommandGamemode.a(this.b);
+         CommandGamerule.a(this.b);
+         CommandGive.a(this.b);
+@@ -143,48 +147,56 @@ public class CommandDispatcher {
+         CommandKick.a(this.b);
+         CommandKill.a(this.b);
+         CommandList.a(this.b);
+-        CommandLocate.a(this.b);
+-        CommandLocateBiome.a(this.b);
+-        CommandLoot.a(this.b);
+-        CommandTell.a(this.b);
+-        CommandParticle.a(this.b);
+-        CommandPlaySound.a(this.b);
++        // HodoCraft start
++        // CommandLocate.a(this.b);
++        // CommandLocateBiome.a(this.b);
++        // CommandLoot.a(this.b);
++        // CommandTell.a(this.b);
++        // CommandParticle.a(this.b);
++        // CommandPlaySound.a(this.b);
++        // HodoCraft end
+         CommandReload.a(this.b);
+-        CommandRecipe.a(this.b);
+-        CommandReplaceItem.a(this.b);
+-        CommandSay.a(this.b);
+-        CommandSchedule.a(this.b);
+-        CommandScoreboard.a(this.b);
+-        CommandSeed.a(this.b, commanddispatcher_servertype != CommandDispatcher.ServerType.INTEGRATED);
+-        CommandSetBlock.a(this.b);
+-        CommandSpawnpoint.a(this.b);
+-        CommandSetWorldSpawn.a(this.b);
++        // HodoCraft start
++        // CommandRecipe.a(this.b);
++        // CommandReplaceItem.a(this.b);
++        // CommandSay.a(this.b);
++        // CommandSchedule.a(this.b);
++        // CommandScoreboard.a(this.b);
++        // CommandSeed.a(this.b, commanddispatcher_servertype != CommandDispatcher.ServerType.INTEGRATED);
++        // CommandSetBlock.a(this.b);
++        // CommandSpawnpoint.a(this.b);
++        // CommandSetWorldSpawn.a(this.b);
++        // HodoCraft end
+         CommandSpectate.a(this.b);
+-        CommandSpreadPlayers.a(this.b);
+-        CommandStopSound.a(this.b);
+-        CommandSummon.a(this.b);
+-        CommandTag.a(this.b);
+-        CommandTeam.a(this.b);
+-        CommandTeamMsg.a(this.b);
++        // HodoCraft start
++        // CommandSpreadPlayers.a(this.b);
++        // CommandStopSound.a(this.b);
++        // CommandSummon.a(this.b);
++        // CommandTag.a(this.b);
++        // CommandTeam.a(this.b);
++        // CommandTeamMsg.a(this.b);
++        // HodoCraft end
+         CommandTeleport.a(this.b);
+-        CommandTellRaw.a(this.b);
+-        CommandTime.a(this.b);
+-        CommandTitle.a(this.b);
+-        CommandTrigger.a(this.b);
+-        CommandWeather.a(this.b);
+-        CommandWorldBorder.a(this.b);
++        // HodoCraft start
++        // CommandTellRaw.a(this.b);
++        // CommandTime.a(this.b);
++        // CommandTitle.a(this.b);
++        // CommandTrigger.a(this.b);
++        // CommandWeather.a(this.b);
++        // CommandWorldBorder.a(this.b);
++        // HodoCraft end
+         if (SharedConstants.d) {
+             GameTestHarnessTestCommand.a(this.b);
+         }
+ 
+         if (commanddispatcher_servertype.e) {
+-            CommandBanIp.a(this.b);
++            // CommandBanIp.a(this.b); // HodoCraft
+             CommandBanList.a(this.b);
+             CommandBan.a(this.b);
+             CommandDeop.a(this.b);
+             CommandOp.a(this.b);
+             CommandPardon.a(this.b);
+-            CommandPardonIP.a(this.b);
++            // CommandPardonIP.a(this.b); // HodoCraft
+             CommandSaveAll.a(this.b);
+             CommandSaveOff.a(this.b);
+             CommandSaveOn.a(this.b);
