@@ -1,0 +1,55 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Lm5392 <lmmodqwq@outlook.com>
+Date: Mon, 4 Aug 2025 10:37:22 +0800
+Subject: [PATCH] Stop loading permissions.yml
+
+
+diff --git a/src/main/java/org/bukkit/craftbukkit/CraftServer.java b/src/main/java/org/bukkit/craftbukkit/CraftServer.java
+index 894c7834f8e5829058e5004829a795a1004510bf..eea575c24b472c06d01d1ead9c71e3712bd8f5ff 100644
+--- a/src/main/java/org/bukkit/craftbukkit/CraftServer.java
++++ b/src/main/java/org/bukkit/craftbukkit/CraftServer.java
+@@ -422,7 +422,10 @@ public final class CraftServer implements Server {
+         if (type == PluginLoadOrder.STARTUP) {
+             helpMap.clear();
+             helpMap.initializeGeneralTopics();
+-            if (com.destroystokyo.paper.PaperConfig.loadPermsBeforePlugins) loadCustomPermissions(); // Paper
++            if (com.destroystokyo.paper.PaperConfig.loadPermsBeforePlugins) {
++                // loadCustomPermissions(); // HodoCraft
++            } // Paper
++
+         }
+ 
+         Plugin[] plugins = pluginManager.getPlugins();
+@@ -442,7 +445,9 @@ public final class CraftServer implements Server {
+             commandMap.registerServerAliases();
+             DefaultPermissions.registerCorePermissions();
+             CraftDefaultPermissions.registerCorePermissions();
+-            if (!com.destroystokyo.paper.PaperConfig.loadPermsBeforePlugins) loadCustomPermissions(); // Paper
++            if (!com.destroystokyo.paper.PaperConfig.loadPermsBeforePlugins) {
++                // loadCustomPermissions(); // HodoCraft
++            } // Paper
+             helpMap.initializeCommands();
+             syncCommands();
+         }
+@@ -2441,7 +2446,9 @@ public final class CraftServer implements Server {
+     @Override
+     public void reloadPermissions() {
+         pluginManager.clearPermissions();
+-        if (com.destroystokyo.paper.PaperConfig.loadPermsBeforePlugins) loadCustomPermissions();
++        if (com.destroystokyo.paper.PaperConfig.loadPermsBeforePlugins) {
++            // loadCustomPermissions(); // HodoCraft
++        } // Paper
+         for (Plugin plugin : pluginManager.getPlugins()) {
+             for (Permission perm : plugin.getDescription().getPermissions()) {
+                 try {
+@@ -2451,7 +2458,9 @@ public final class CraftServer implements Server {
+                 }
+             }
+         }
+-        if (!com.destroystokyo.paper.PaperConfig.loadPermsBeforePlugins) loadCustomPermissions();
++        if (!com.destroystokyo.paper.PaperConfig.loadPermsBeforePlugins) {
++            // loadCustomPermissions(); // HodoCraft
++        } // Paper
+         DefaultPermissions.registerCorePermissions();
+         CraftDefaultPermissions.registerCorePermissions();
+     }
